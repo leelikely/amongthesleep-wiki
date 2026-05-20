@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amongthesleep.wiki/sitemap.xml
+
+Crawl-delay: 5

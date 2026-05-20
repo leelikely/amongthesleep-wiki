@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ============================================================
+    META TAGS
+    ============================================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete Among the Sleep strategy guide. Full walkthrough for all 5 chapters, puzzle solutions, hidden collectible locations, and endings explained. Community-verified.">
+    <meta name="keywords" content="Among the Sleep, walkthrough, guide, puzzle solutions, collectibles, endings, horror game, Krillbite Studio, strategy guide, mobile version">
+    <meta name="author" content="Among the Sleep Guide">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://amongthesleep.wiki/">
+    <link rel="alternate" hreflang="en" href="https://amongthesleep.wiki/">
+    <link rel="alternate" hreflang="x-default" href="https://amongthesleep.wiki/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Among the Sleep Guide - Complete Walkthrough, Puzzle Solutions & Collectibles">
+    <meta property="og:description" content="Every puzzle solved. Every collectible found. Every ending explained. The definitive Among the Sleep strategy guide.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amongthesleep.wiki/">
+    <meta property="og:image" content="https://amongthesleep.wiki/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Among the Sleep Guide">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Among the Sleep Guide - Complete Walkthrough & Strategy Guide">
+    <meta name="twitter:description" content="Every puzzle solved. Every collectible found. Every ending explained. The definitive guide.">
+    <meta name="twitter:image" content="https://amongthesleep.wiki/assets/images/og-image.jpg">
+
+    <!-- Favicon (占位，后续替换为实际icon) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧸</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <title>Among the Sleep Guide - Walkthrough, Puzzles & Collectibles</title>
+
+    <!-- ============================================================
+    JSON-LD 结构化数据：面包屑 + 网站信息
+    ============================================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "Among the Sleep Guide",
+                "url": "https://amongthesleep.wiki/"
+            },
+            {
+                "@type": "WebSite",
+                "name": "Among the Sleep Guide",
+                "url": "https://amongthesleep.wiki/",
+                "description": "Complete Among the Sleep strategy guide with walkthrough, puzzle solutions, collectibles, and endings.",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://amongthesleep.wiki/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://amongthesleep.wiki/"
+                    }
+                ]
+            }
+        ]
+    }
+</script>
+  
+    <!-- ============================================================
+    CSS FRAMEWORK — 全站样式框架
+    所有CSS变量、基础样式、组件样式均在此定义
+    后续页面直接复用此框架
+    ============================================================ -->
+    <style>
+        /* ============================================================
+           PART 1: CSS 自定义属性 (Design Tokens)
+           来源：阶段〇设计系统文档
+           ============================================================ */
+        :root {
+            /* --- 断点参考值 --- */
+            --breakpoint-mobile: 480px;
+            --breakpoint-tablet: 768px;
+            --breakpoint-desktop: 1024px;
+            --breakpoint-wide: 1280px;
+
+            /* --- 字体家族 --- */
+            --font-display: 'Playfair Display', 'Noto Serif SC', serif;
+            --font-heading: 'Noto Serif SC', serif;
+            --font-body: 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+
+            /* --- 字号阶梯 --- */
+            --font-size-root: 16px;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-md: 1.15rem;
+            --font-size-lg: 1.25rem;
+            --font-size-xl: 1.5rem;
+            --font-size-2xl: 1.875rem;
+            --font-size-3xl: 2.25rem;
+            --font-size-hero: 3rem;
+
+            /* --- 行高 & 字间距 --- */
+            --line-height-tight: 1.25;
+            --line-height-normal: 1.7;
+            --line-height-relaxed: 1.85;
+            --letter-spacing-title: 0.02em;
+            --letter-spacing-body: 0.01em;
+
+            /* --- 背景色 --- */
+            --color-bg-primary: #0F0C0D;
+            --color-bg-secondary: #1A1517;
+            --color-bg-tertiary: #231D20;
+            --color-bg-elevated: #2E2629;
+            --color-border: #3A3235;
+
+            /* --- 文字色 --- */
+            --color-text-primary: #E8E0D8;
+            --color-text-secondary: #B5A99E;
+            --color-text-tertiary: #7A6E65;
+
+            /* --- 强调色 (品牌色) --- */
+            --color-accent-amber: #D4943A;
+            --color-accent-amber-lt: #E8B867;
+            --color-accent-crimson: #8B2E2E;
+            --color-accent-crimson-lt: #B84545;
+            --color-accent-moon: #6B8DA6;
+            --color-accent-success: #4A7C59;
+
+            /* --- 氛围渐变 --- */
+            --gradient-ambient-top: radial-gradient(
+                ellipse 800px 300px at 50% 0%,
+                rgba(212, 148, 58, 0.06) 0%,
+                transparent 70%
+            );
+            --gradient-card-hover: linear-gradient(
+                180deg,
+                rgba(212, 148, 58, 0.04) 0%,
+                transparent 100%
+            );
+            --gradient-divider: linear-gradient(
+                90deg,
+                transparent 0%,
+                var(--color-border) 20%,
+                var(--color-border) 80%,
+                transparent 100%
+            );
+
+            /* --- 间距 (8px网格) --- */
+            --space-0: 0;
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+
+            /* --- 阴影层级 --- */
+            --shadow-none: none;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.4);
+            --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6), 0 8px 16px rgba(0, 0, 0, 0.5);
+            --shadow-glow-amber: 0 0 20px rgba(212, 148, 58, 0.25), 0 0 4px rgba(212, 148, 58, 0.15);
+
+            /* --- 圆角 --- */
+            --radius-none: 0;
+            --radius-sm: 4px;
+            --radius-md: 6px;
+            --radius-lg: 10px;
+            --radius-xl: 16px;
+            --radius-full: 9999px;
+
+            /* --- 按钮 --- */
+            --btn-min-height: 44px;
+            --btn-padding-x: 24px;
+            --btn-padding-y: 12px;
+            --btn-font-size: 0.9375rem;
+            --btn-font-weight: 500;
+            --btn-border-width: 2px;
+            --btn-transition: all 0.2s ease;
+
+            /* --- 提示框 --- */
+            --callout-padding: 16px 20px;
+            --callout-radius: var(--radius-md);
+            --callout-border-left: 4px solid;
+            --callout-gap: var(--space-4);
+            --callout-title-size: 0.9375rem;
+            --callout-title-weight: 600;
+            --callout-body-size: 0.875rem;
+
+            /* --- 导航尺寸 --- */
+            --navbar-height: 64px;
+            --sidebar-width: 240px;
+            --adbar-width: 280px;
+            --content-max-width: 720px;
+            --bottom-nav-height: 56px;
+
+            /* --- 触控 --- */
+            --touch-target-min: 44px;
+            --touch-spacing: 8px;
+
+            /* --- 过渡 --- */
+            --transition-fast: 150ms ease;
+            --transition-normal: 250ms ease;
+            --transition-slow: 400ms ease;
+        }
+
+        /* ============================================================
+           PART 2: CSS Reset & 基础样式
+           ============================================================ */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: var(--font-size-root);
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: var(--font-size-base);
+            font-weight: 300;
+            line-height: var(--line-height-normal);
+            letter-spacing: var(--letter-spacing-body);
+            color: var(--color-text-primary);
+            background-color: var(--color-bg-primary);
+            background-image: var(--gradient-ambient-top);
+            background-attachment: fixed;
+            min-height: 100vh;
+            /* 为固定导航栏留出空间 */
+            padding-top: var(--navbar-height);
+        }
+
+        /* --- 无障碍：跳转到主内容的链接 --- */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: var(--space-4);
+            z-index: 10000;
+            padding: var(--space-3) var(--space-6);
+            background: var(--color-accent-amber);
+            color: var(--color-bg-primary);
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            transition: top var(--transition-fast);
+        }
+        .skip-link:focus {
+            top: var(--space-2);
+        }
+
+        /* --- 链接基础样式 --- */
+        a {
+            color: var(--color-accent-amber);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+            transition: color var(--transition-fast);
+        }
+        a:hover,
+        a:focus-visible {
+            color: var(--color-accent-amber-lt);
+        }
+        a:focus-visible {
+            outline: 2px solid var(--color-accent-amber);
+            outline-offset: 2px;
+            border-radius: var(--radius-sm);
+        }
+
+        /* --- 标题基础样式 --- */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: var(--line-height-tight);
+            letter-spacing: var(--letter-spacing-title);
+            color: var(--color-text-primary);
+        }
+        h1 { font-size: var(--font-size-3xl); }
+        h2 { font-size: var(--font-size-2xl); }
+        h3 { font-size: var(--font-size-xl); }
+        h4 { font-size: var(--font-size-lg); }
+
+        /* --- 段落 --- */
+        p {
+            margin-bottom: var(--space-4);
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- 列表 --- */
+        ul, ol {
+            padding-left: var(--space-6);
+            margin-bottom: var(--space-4);
+        }
+        li {
+            margin-bottom: var(--space-2);
+        }
+
+        /* --- 图片 --- */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- 选中文字颜色 --- */
+        ::selection {
+            background: rgba(212, 148, 58, 0.3);
+            color: var(--color-text-primary);
+        }
+
+        /* --- 焦点样式全局 --- */
+        :focus-visible {
+            outline: 2px solid var(--color-accent-amber);
+            outline-offset: 2px;
+        }
+
+        /* ============================================================
+           PART 3: 布局容器
+           ============================================================ */
+        .container {
+            width: 100%;
+            max-width: var(--breakpoint-wide);
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: var(--space-4);
+            padding-right: var(--space-4);
+        }
+
+        /* 桌面端三栏布局容器（用于内容页，首页也预设） */
+        .layout-three-col {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-8);
+            max-width: var(--breakpoint-wide);
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-4);
+        }
+
+        /* 主内容区最大宽度 */
+        .content-main {
+            max-width: var(--content-max-width);
+            width: 100%;
+        }
+
+        /* ============================================================
+           PART 4: 顶部导航栏 (.site-header)
+           ============================================================ */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: var(--navbar-height);
+            background: rgba(15, 12, 13, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+            transition: box-shadow var(--transition-normal);
+        }
+        /* 滚动时添加阴影 */
+        .site-header.scrolled {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: var(--breakpoint-wide);
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+        }
+
+        /* Logo */
+        .header-logo {
+            font-family: var(--font-display);
+            font-size: var(--font-size-lg);
+            font-weight: 900;
+            color: var(--color-text-primary);
+            text-decoration: none;
+            white-space: nowrap;
+            letter-spacing: 0.03em;
+            transition: color var(--transition-fast);
+            /* 确保最小触控区 */
+            min-height: var(--touch-target-min);
+            display: flex;
+            align-items: center;
+        }
+        .header-logo:hover {
+            color: var(--color-accent-amber);
+        }
+        .header-logo .logo-icon {
+            margin-right: var(--space-2);
+            font-size: 1.3em;
+        }
+
+        /* --- 桌面端导航菜单 --- */
+        .main-nav {
+            display: none;
+            align-items: center;
+            gap: var(--space-1);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+        .main-nav > li {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+        .main-nav a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 var(--space-3);
+            font-size: var(--font-size-sm);
+            font-weight: 400;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: color var(--transition-fast);
+            min-height: var(--touch-target-min);
+        }
+        .main-nav a:hover,
+        .main-nav a:focus-visible {
+            color: var(--color-accent-amber);
+        }
+        .main-nav a.active {
+            color: var(--color-accent-amber);
+        }
+        /* 当前页面指示器 */
+        .main-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: var(--space-3);
+            right: var(--space-3);
+            height: 3px;
+            background: var(--color-accent-amber);
+            border-radius: var(--radius-full) var(--radius-full) 0 0;
+        }
+
+        /* --- 下拉菜单 (Walkthrough) --- */
+        .has-dropdown .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: var(--space-1);
+        }
+        .dropdown-arrow {
+            display: inline-block;
+            font-size: 0.6em;
+            transition: transform var(--transition-fast);
+        }
+        .has-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: var(--color-bg-elevated);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            list-style: none;
+            padding: var(--space-2) 0;
+            margin: 0;
+            z-index: 1001;
+            animation: dropdownIn var(--transition-fast) ease-out;
+        }
+        .has-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu li {
+            margin: 0;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            height: auto;
+            min-height: auto;
+            transition: all var(--transition-fast);
+        }
+        .dropdown-menu a:hover {
+            background: rgba(212, 148, 58, 0.08);
+            color: var(--color-accent-amber);
+        }
+
+        @keyframes dropdownIn {
+            from {
+                opacity: 0;
+                transform: translateY(-4px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- 汉堡菜单按钮 (平板/手机) --- */
+        .hamburger-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--touch-target-min);
+            height: var(--touch-target-min);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-2);
+            z-index: 1002;
+            color: var(--color-text-secondary);
+            transition: color var(--transition-fast);
+        }
+        .hamburger-btn:hover {
+            color: var(--color-accent-amber);
+        }
+        /* 汉堡图标：三横线，纯CSS实现 */
+        .hamburger-icon {
+            position: relative;
+            width: 22px;
+            height: 16px;
+        }
+        .hamburger-icon span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: currentColor;
+            border-radius: 2px;
+            transition: all var(--transition-normal);
+            left: 0;
+        }
+        .hamburger-icon span:nth-child(1) { top: 0; }
+        .hamburger-icon span:nth-child(2) { top: 7px; }
+        .hamburger-icon span:nth-child(3) { top: 14px; }
+        /* 展开状态 → X */
+        .hamburger-btn[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
+            top: 7px;
+            transform: rotate(45deg);
+        }
+        .hamburger-btn[aria-expanded="true"] .hamburger-icon span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .hamburger-btn[aria-expanded="true"] .hamburger-icon span:nth-child(3) {
+            top: 7px;
+            transform: rotate(-45deg);
+        }
+
+        /* --- 移动端菜单面板 --- */
+        .mobile-nav-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 85vw;
+            max-width: 320px;
+            height: 100vh;
+            height: 100dvh;
+            background: var(--color-bg-secondary);
+            border-right: 1px solid var(--color-border);
+            box-shadow: var(--shadow-xl);
+            z-index: 1001;
+            padding: var(--space-16) var(--space-4) var(--space-8);
+            transform: translateX(-100%);
+            transition: transform var(--transition-normal) ease-out;
+            overflow-y: auto;
+            /* 防止内容在关闭前被看到 */
+            visibility: hidden;
+        }
+        .mobile-nav-panel.is-open {
+            transform: translateX(0);
+            visibility: visible;
+        }
+        .mobile-nav-panel .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .mobile-nav-panel .nav-list li {
+            margin: 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .mobile-nav-panel .nav-list a {
+            display: block;
+            padding: var(--space-3) var(--space-4);
+            font-size: var(--font-size-base);
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            min-height: var(--touch-target-min);
+            display: flex;
+            align-items: center;
+            transition: all var(--transition-fast);
+        }
+        .mobile-nav-panel .nav-list a:hover {
+            background: rgba(212, 148, 58, 0.06);
+            color: var(--color-accent-amber);
+        }
+        .mobile-nav-panel .nav-list a.active {
+            color: var(--color-accent-amber);
+            border-left: 3px solid var(--color-accent-amber);
+            padding-left: calc(var(--space-4) - 3px);
+        }
+        /* 子菜单（章节列表） */
+        .mobile-nav-panel .sub-nav {
+            list-style: none;
+            padding-left: var(--space-6);
+            margin: 0;
+        }
+        .mobile-nav-panel .sub-nav a {
+            font-size: var(--font-size-sm);
+            padding: var(--space-2) var(--space-4);
+            min-height: 40px;
+        }
+
+        /* 移动端遮罩 */
+        .nav-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+        .nav-overlay.is-visible {
+            display: block;
+            opacity: 1;
+        }
+
+        /* ============================================================
+           PART 5: 面包屑导航 (.breadcrumb)
+           ============================================================ */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: var(--space-2);
+            padding: var(--space-3) 0;
+            font-size: var(--font-size-sm);
+            color: var(--color-text-tertiary);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+        }
+        .breadcrumb::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+        .breadcrumb a {
+            color: var(--color-text-tertiary);
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .breadcrumb a:hover {
+            color: var(--color-accent-amber);
+        }
+        .breadcrumb .separator {
+            flex-shrink: 0;
+            color: var(--color-text-tertiary);
+            user-select: none;
+        }
+        .breadcrumb .current {
+            color: var(--color-accent-amber);
+            font-weight: 500;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* ============================================================
+           PART 6: 英雄区 (.hero)
+           ============================================================ */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: var(--space-16) var(--space-4) var(--space-12);
+            overflow: hidden;
+        }
+        /* 背景微光 */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 400px;
+            background: radial-gradient(
+                ellipse at center,
+                rgba(212, 148, 58, 0.07) 0%,
+                transparent 70%
+            );
+            pointer-events: none;
+        }
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: var(--font-size-hero);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-4);
+            position: relative;
+        }
+        .hero-title .highlight {
+            color: var(--color-accent-amber);
+        }
+        .hero-subtitle {
+            font-size: var(--font-size-md);
+            font-weight: 300;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-6);
+            line-height: var(--line-height-relaxed);
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-description {
+            font-size: var(--font-size-base);
+            color: var(--color-text-tertiary);
+            max-width: 600px;
+            margin: 0 auto var(--space-8);
+            line-height: var(--line-height-normal);
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--btn-padding-y) var(--btn-padding-x);
+            min-height: var(--btn-min-height);
+            font-size: var(--btn-font-size);
+            font-weight: var(--btn-font-weight);
+            color: var(--color-bg-primary);
+            background: var(--color-accent-amber);
+            border: var(--btn-border-width) solid var(--color-accent-amber);
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--btn-transition), box-shadow var(--transition-normal);
+            position: relative;
+        }
+        .hero-cta:hover {
+            background: var(--color-accent-amber-lt);
+            border-color: var(--color-accent-amber-lt);
+            box-shadow: var(--shadow-glow-amber);
+            color: var(--color-bg-primary);
+            transform: translateY(-1px);
+        }
+        .hero-cta:active {
+            transform: translateY(0);
+        }
+        .hero-cta .arrow {
+            transition: transform var(--transition-fast);
+        }
+        .hero-cta:hover .arrow {
+            transform: translateX(4px);
+        }
+
+        /* ============================================================
+           PART 7: 手机版横幅 (.mobile-banner)
+           ============================================================ */
+        .mobile-banner {
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-accent-amber);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6) var(--space-6);
+            margin: 0 auto var(--space-12);
+            max-width: var(--breakpoint-wide);
+            margin-left: var(--space-4);
+            margin-right: var(--space-4);
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 30px rgba(212, 148, 58, 0.08), 0 0 8px rgba(212, 148, 58, 0.05);
+            animation: bannerPulse 4s ease-in-out infinite;
+        }
+        @keyframes bannerPulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(212, 148, 58, 0.08), 0 0 8px rgba(212, 148, 58, 0.05); }
+            50% { box-shadow: 0 0 40px rgba(212, 148, 58, 0.14), 0 0 12px rgba(212, 148, 58, 0.08); }
+        }
+        .mobile-banner .banner-icon {
+            font-size: 2rem;
+            margin-bottom: var(--space-2);
+            display: block;
+        }
+        .mobile-banner .banner-title {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--color-accent-amber);
+            margin-bottom: var(--space-1);
+        }
+        .mobile-banner .banner-sub {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-4);
+        }
+        .mobile-banner .banner-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            color: var(--color-accent-amber-lt);
+            text-decoration: none;
+            transition: gap var(--transition-fast);
+        }
+        .mobile-banner .banner-link:hover {
+            gap: var(--space-2);
+        }
+
+        /* ============================================================
+           PART 8: 快速导航卡片区 (.card-grid)
+           ============================================================ */
+        .section-title {
+            font-family: var(--font-display);
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: var(--space-8);
+            color: var(--color-text-primary);
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-6);
+            max-width: var(--breakpoint-wide);
+            margin: 0 auto var(--space-12);
+            padding: 0 var(--space-4);
+        }
+        .card {
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-6);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+            /* 确保整张卡片可点击时无障碍 */
+            cursor: default;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-card-hover);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+        .card:hover {
+            border-color: var(--color-accent-amber);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .card:hover::before {
+            opacity: 1;
+        }
+        .card-icon {
+            font-size: 2.25rem;
+            margin-bottom: var(--space-3);
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+        .card-title {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            margin-bottom: var(--space-2);
+            position: relative;
+            z-index: 1;
+        }
+        .card-description {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-4);
+            line-height: var(--line-height-normal);
+            position: relative;
+            z-index: 1;
+        }
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            color: var(--color-accent-amber);
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+            transition: gap var(--transition-fast);
+        }
+        .card-link:hover {
+            gap: var(--space-2);
+            color: var(--color-accent-amber-lt);
+        }
+        /* 让整张卡片可点击的覆盖层 */
+        .card-link-cover {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+        }
+
+        /* ============================================================
+           PART 9: 信任区块 (.trust-section)
+           ============================================================ */
+        .trust-section {
+            background: var(--color-bg-secondary);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--space-12) var(--space-4);
+            margin-bottom: var(--space-12);
+        }
+        .trust-section .section-title {
+            margin-bottom: var(--space-8);
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-8);
+            max-width: var(--breakpoint-wide);
+            margin: 0 auto;
+            text-align: center;
+        }
+        .trust-item {
+            padding: var(--space-4);
+        }
+        .trust-item .trust-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--space-3);
+        }
+        .trust-item .trust-heading {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-md);
+            font-weight: 700;
+            color: var(--color-accent-amber);
+            margin-bottom: var(--space-2);
+        }
+        .trust-item .trust-text {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            line-height: var(--line-height-normal);
+        }
+
+        /* ============================================================
+           PART 10: 广告位样式 (.ad-slot)
+           统一广告基础设施，初期 Monetag，后期 AdSense
+           ============================================================ */
+        /* 广告槽通用样式 */
+        .ad-slot {
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            z-index: 1;
+        }
+        .ad-slot::before {
+            content: 'Advertisement';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: var(--font-size-xs);
+            color: var(--color-text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.6;
+        }
+        .ad-slot.ad-loaded::before {
+            content: none;
+        }
+
+        /* 顶部横幅广告位 */
+        .ad-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 728px;
+            min-height: 90px;
+            margin: var(--space-4) auto;
+            background: var(--color-bg-tertiary);
+            border: 1px dashed var(--color-border);
+            border-radius: var(--radius-sm);
+        }
+        @media (max-width: 767px) {
+            .ad-banner {
+                min-height: 60px;
+                max-width: 100%;
+                margin: var(--space-2) auto;
+            }
+        }
+
+        /* 侧边栏广告位 — 仅桌面端显示 */
+        .ad-sidebar {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 300px;
+            min-height: 600px;
+            background: var(--color-bg-tertiary);
+            border: 1px dashed var(--color-border);
+            border-radius: var(--radius-sm);
+            position: sticky;
+            top: calc(var(--navbar-height) + var(--space-4));
+        }
+        @media (min-width: 1024px) {
+            .ad-sidebar {
+                display: flex;
+            }
+        }
+
+        /* 正文内嵌广告位 */
+        .ad-in-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 100%;
+            min-height: 250px;
+            margin: var(--space-6) 0;
+            background: var(--color-bg-tertiary);
+            border: 1px dashed var(--color-border);
+            border-radius: var(--radius-sm);
+        }
+        @media (max-width: 767px) {
+            .ad-in-content {
+                min-height: 180px;
+                margin: var(--space-4) 0;
+            }
+        }
+
+        /* ============================================================
+           PART 11: 页脚 (.site-footer)
+           ============================================================ */
+        .site-footer {
+            background: var(--color-bg-secondary);
+            border-top: 1px solid var(--color-border);
+            padding: var(--space-8) var(--space-4);
+            margin-top: var(--space-12);
+        }
+        .footer-inner {
+            max-width: var(--breakpoint-wide);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-4);
+            text-align: center;
+        }
+        .footer-copyright {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-tertiary);
+            line-height: var(--line-height-normal);
+        }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-4);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-links a {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-tertiary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        .footer-links a:hover {
+            color: var(--color-accent-amber);
+        }
+        .footer-disclaimer {
+            font-size: var(--font-size-xs);
+            color: var(--color-text-tertiary);
+            opacity: 0.7;
+            max-width: 500px;
+            line-height: var(--line-height-normal);
+        }
+
+        /* ============================================================
+           PART 12: 回到顶部按钮 (.back-to-top)
+           ============================================================ */
+        .back-to-top {
+            position: fixed;
+            bottom: var(--space-6);
+            right: var(--space-6);
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-full);
+            background: var(--color-bg-elevated);
+            border: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-lg);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 900;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-md);
+        }
+        .back-to-top.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background: var(--color-accent-amber);
+            border-color: var(--color-accent-amber);
+            color: var(--color-bg-primary);
+            box-shadow: var(--shadow-glow-amber);
+        }
+        /* 移动端底部导航存在时，调整位置 */
+        @media (max-width: 767px) {
+            .back-to-top {
+                bottom: calc(var(--bottom-nav-height) + var(--space-4));
+            }
+        }
+
+        /* ============================================================
+           PART 13: 移动端底部导航 (.bottom-nav-mobile)
+           ============================================================ */
+        .bottom-nav-mobile {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: var(--bottom-nav-height);
+            background: rgba(15, 12, 13, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid var(--color-border);
+            z-index: 999;
+        }
+        .bottom-nav-mobile a {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            font-size: 0.65rem;
+            color: var(--color-text-tertiary);
+            text-decoration: none;
+            min-height: var(--touch-target-min);
+            transition: color var(--transition-fast);
+        }
+        .bottom-nav-mobile a .bn-icon {
+            font-size: 1.2rem;
+        }
+        .bottom-nav-mobile a.active {
+            color: var(--color-accent-amber);
+        }
+        .bottom-nav-mobile a:hover {
+            color: var(--color-accent-amber-lt);
+        }
+
+        /* ============================================================
+           PART 14: Cookie 同意弹窗 (.cookie-consent)
+           GDPR 合规，与广告系统联动
+           ============================================================ */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 21, 23, 0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 2px solid var(--color-accent-amber);
+            box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            padding: var(--space-4);
+            transform: translateY(100%);
+            transition: transform var(--transition-slow) ease-out;
+        }
+        .cookie-consent.is-visible {
+            transform: translateY(0);
+        }
+
+        .cookie-inner {
+            max-width: var(--breakpoint-wide);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+            align-items: center;
+            text-align: center;
+        }
+
+        .cookie-text {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            line-height: var(--line-height-normal);
+            max-width: 600px;
+        }
+        .cookie-text a {
+            color: var(--color-accent-amber);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .cookie-text a:hover {
+            color: var(--color-accent-amber-lt);
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: var(--space-3);
+            flex-wrap: wrap;
+            justify-content: center;
+            /* 移动端按钮堆叠 */
+        }
+
+        .cookie-btn {
+            padding: var(--space-2) var(--space-6);
+            min-height: var(--btn-min-height);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            font-family: var(--font-body);
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            transition: var(--btn-transition);
+            border: var(--btn-border-width) solid transparent;
+            white-space: nowrap;
+        }
+
+        /* Accept All — 主按钮 */
+        .cookie-btn-accept {
+            background: var(--color-accent-amber);
+            color: var(--color-bg-primary);
+            border-color: var(--color-accent-amber);
+        }
+        .cookie-btn-accept:hover {
+            background: var(--color-accent-amber-lt);
+            border-color: var(--color-accent-amber-lt);
+            box-shadow: var(--shadow-glow-amber);
+        }
+
+        /* Decline — 次按钮 */
+        .cookie-btn-decline {
+            background: transparent;
+            color: var(--color-text-secondary);
+            border-color: var(--color-border);
+        }
+        .cookie-btn-decline:hover {
+            border-color: var(--color-text-tertiary);
+            color: var(--color-text-primary);
+            background: rgba(212, 148, 58, 0.04);
+        }
+
+        /* 平板及以上：横向布局 */
+        @media (min-width: 768px) {
+            .cookie-inner {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+            .cookie-actions {
+                flex-shrink: 0;
+            }
+        }
+
+        /* ============================================================
+           PART 15: 平板端响应式 (768px - 1024px)
+           ============================================================ */
+        @media (min-width: 768px) {
+            .container {
+                padding-left: var(--space-8);
+                padding-right: var(--space-8);
+            }
+
+            /* 显示桌面导航，隐藏汉堡按钮 */
+            .main-nav {
+                display: flex;
+            }
+            .hamburger-btn {
+                display: none;
+            }
+
+            /* 底部导航在平板上可选显示 */
+            .bottom-nav-mobile {
+                display: none;
+            }
+
+            /* 卡片网格 → 2列 */
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* 信任区 → 3列 */
+            .trust-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            /* 页脚改为横向 */
+            .footer-inner {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+                flex-wrap: wrap;
+            }
+
+            /* Cookie弹窗横向布局 */
+            .cookie-inner {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+
+            /* 英雄区增大 */
+            .hero {
+                padding: var(--space-20) var(--space-8) var(--space-16);
+            }
+            .hero-title {
+                font-size: calc(var(--font-size-hero) * 1.15);
+            }
+
+            /* 手机版横幅 */
+            .mobile-banner {
+                margin-left: var(--space-8);
+                margin-right: var(--space-8);
+            }
+        }
+
+        /* ============================================================
+           PART 16: 桌面端响应式 (>1024px)
+           ============================================================ */
+        @media (min-width: 1024px) {
+            .container {
+                padding-left: var(--space-10);
+                padding-right: var(--space-10);
+            }
+
+            /* 首页使用带侧边栏的布局 */
+            .home-layout {
+                display: grid;
+                grid-template-columns: 1fr var(--adbar-width);
+                gap: var(--space-8);
+                max-width: var(--breakpoint-wide);
+                margin: 0 auto;
+                padding: 0 var(--space-10);
+                align-items: start;
+            }
+            .home-layout .content-area {
+                min-width: 0;
+            }
+
+            /* 显示侧边栏广告 */
+            .ad-sidebar {
+                display: flex;
+            }
+
+            /* 导航链接字号微调 */
+            .main-nav a {
+                padding: 0 var(--space-4);
+            }
+
+            .hero {
+                padding: var(--space-20) var(--space-10) var(--space-16);
+            }
+
+            .card-grid {
+                padding: 0 var(--space-10);
+            }
+
+            .mobile-banner {
+                margin-left: var(--space-10);
+                margin-right: var(--space-10);
+            }
+        }
+
+        /* ============================================================
+           PART 17: 宽屏优化 (>1280px)
+           ============================================================ */
+        @media (min-width: 1280px) {
+            .hero-title {
+                font-size: calc(var(--font-size-hero) * 1.3);
+            }
+        }
+
+        /* ============================================================
+           PART 18: 辅助类 (Utility Classes)
+           ============================================================ */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        .text-amber {
+            color: var(--color-accent-amber);
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mt-0 { margin-top: 0; }
+        .mb-0 { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+    <!-- ============================================================
+    无障碍：跳转到主内容
+    ============================================================ -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ============================================================
+    顶部导航栏 (.site-header)
+    ============================================================ -->
+    <header class="site-header" id="siteHeader" role="banner">
+        <div class="header-inner">
+            <!-- Logo -->
+            <a href="./index.html" class="header-logo" aria-label="Among the Sleep Guide Home">
+                <span class="logo-icon" aria-hidden="true">🧸</span>
+                <span>Among the Sleep Guide</span>
+            </a>
+
+            <!-- 桌面端主导航 -->
+            <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+                <ul class="main-nav">
+                    <li><a href="./index.html" class="active" aria-current="page">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                            Walkthrough <span class="dropdown-arrow" aria-hidden="true">▾</span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="none"><a href="./walkthrough-chapter-1-nursery.html" role="menuitem">Chapter 1 · Nursery</a></li>
+                            <li role="none"><a href="./walkthrough-chapter-2-kitchen.html" role="menuitem">Chapter 2 · Kitchen</a></li>
+                            <li role="none"><a href="./walkthrough-chapter-3-living-room.html" role="menuitem">Chapter 3 · Living Room</a></li>
+                            <li role="none"><a href="./walkthrough-chapter-4-hallway.html" role="menuitem">Chapter 4 · Hallway</a></li>
+                            <li role="none"><a href="./walkthrough-chapter-5-forest.html" role="menuitem">Chapter 5 · Forest</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./puzzle-solutions.html">Puzzle Solutions</a></li>
+                    <li><a href="./collectibles.html">Collectibles</a></li>
+                    <li><a href="./endings.html">Endings</a></li>
+                    <li><a href="./mobile-version.html">Mobile FAQ</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- 汉堡菜单按钮 (平板/手机) -->
+            <button
+                class="hamburger-btn"
+                id="hamburgerBtn"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileNavPanel"
+            >
+                <span class="hamburger-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 移动端导航面板 -->
+    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <ul class="nav-list" role="list">
+            <li><a href="./index.html" class="active">🏠 Home</a></li>
+            <li>
+                <a href="#">📖 Walkthrough</a>
+                <ul class="sub-nav">
+                    <li><a href="./walkthrough-chapter-1-nursery.html">Chapter 1 · Nursery</a></li>
+                    <li><a href="./walkthrough-chapter-2-kitchen.html">Chapter 2 · Kitchen</a></li>
+                    <li><a href="./walkthrough-chapter-3-living-room.html">Chapter 3 · Living Room</a></li>
+                    <li><a href="./walkthrough-chapter-4-hallway.html">Chapter 4 · Hallway</a></li>
+                    <li><a href="./walkthrough-chapter-5-forest.html">Chapter 5 · Forest</a></li>
+                </ul>
+            </li>
+            <li><a href="./puzzle-solutions.html">🧩 Puzzle Solutions</a></li>
+            <li><a href="./collectibles.html">⭐ Collectibles</a></li>
+            <li><a href="./endings.html">🎬 Endings</a></li>
+            <li><a href="./mobile-version.html">📱 Mobile FAQ</a></li>
+            <li><a href="./about.html">ℹ️ About</a></li>
+            <li><a href="./contact.html">✉️ Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ============================================================
+    主内容区
+    ============================================================ -->
+    <main id="main-content" role="main">
+        <div class="container">
+            <!-- 面包屑导航 -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="./index.html">Home</a>
+                <span class="separator" aria-hidden="true">›</span>
+                <span class="current">Home</span>
+            </nav>
+
+            <!-- 顶部广告位 -->
+                        <!-- Monetag/AdSense banner -->
+            <div id="ad-banner-top" class="ad-slot ad-banner" role="complementary" aria-label="Advertisement"></div>
+        </div>
+
+        <!-- 英雄区 -->
+        <section class="hero" aria-labelledby="heroTitle">
+            <h1 class="hero-title" id="heroTitle">
+                Among the Sleep<br>
+                <span class="highlight">Complete Strategy Guide</span>
+            </h1>
+            <p class="hero-subtitle">
+                Every puzzle solved. Every collectible found. Every ending explained.
+            </p>
+            <p class="hero-description">
+                Welcome to the most comprehensive <em>Among the Sleep</em> strategy guide on the web.
+                Whether you're stuck in the twisted hallways, hunting down every last drawing,
+                or trying to unlock the secret ending — we've got you covered. Built by players,
+                for players. No fluff, no filler, just the help you need.
+            </p>
+            <a href="./walkthrough-chapter-1-nursery.html" class="hero-cta">
+                Start Walkthrough <span class="arrow" aria-hidden="true">→</span>
+            </a>
+        </section>
+
+        <!-- 手机版横幅 -->
+        <aside class="mobile-banner" aria-labelledby="mobileBannerTitle">
+            <span class="banner-icon" aria-hidden="true">📱</span>
+            <p class="banner-title" id="mobileBannerTitle">Among the Sleep Mobile — Coming June 2, 2026</p>
+            <p class="banner-sub">Full game, no cuts, coming to iOS &amp; Android. This guide works for all versions.</p>
+            <a href="./mobile-version.html" class="banner-link">Learn More <span aria-hidden="true">→</span></a>
+        </aside>
+
+        <!-- 桌面端：主内容 + 侧边栏广告 -->
+        <div class="home-layout">
+            <div class="content-area">
+                <!-- 快速导航卡片 -->
+                <section aria-labelledby="quickNavTitle">
+                    <h2 class="section-title" id="quickNavTitle">What Are You Looking For?</h2>
+                    <div class="card-grid">
+                        <!-- 卡片1：攻略 -->
+                        <article class="card">
+                            <span class="card-icon" aria-hidden="true">📖</span>
+                            <h3 class="card-title">Full Walkthrough</h3>
+                            <p class="card-description">
+                                Step-by-step guides for all five chapters. Navigate the nightmare
+                                from the nursery to the dark forest with clear directions and annotated maps.
+                            </p>
+                            <a href="./walkthrough-chapter-1-nursery.html" class="card-link-cover" aria-label="Full Walkthrough - Start from Chapter 1"></a>
+                            <span class="card-link" aria-hidden="true">Read More →</span>
+                        </article>
+
+                        <!-- 卡片2：谜题 -->
+                        <article class="card">
+                            <span class="card-icon" aria-hidden="true">🧩</span>
+                            <h3 class="card-title">Puzzle Solutions</h3>
+                            <p class="card-description">
+                                Stuck on a specific puzzle? Get straight to the answer. Every
+                                interactive object, every mechanism, every "what do I do here?" moment — solved.
+                            </p>
+                            <a href="./puzzle-solutions.html" class="card-link-cover" aria-label="Puzzle Solutions"></a>
+                            <span class="card-link" aria-hidden="true">Read More →</span>
+                        </article>
+
+                        <!-- 卡片3：收集品 -->
+                        <article class="card">
+                            <span class="card-icon" aria-hidden="true">🎨</span>
+                            <h3 class="card-title">All Collectibles</h3>
+                            <p class="card-description">
+                                Track down every hidden drawing in the game. Detailed locations
+                                with screenshots so you don't miss a single one. 100% completion awaits.
+                            </p>
+                            <a href="./collectibles.html" class="card-link-cover" aria-label="All Collectibles Guide"></a>
+                            <span class="card-link" aria-hidden="true">Read More →</span>
+                        </article>
+
+                        <!-- 卡片4：结局 -->
+                        <article class="card">
+                            <span class="card-icon" aria-hidden="true">🎬</span>
+                            <h3 class="card-title">Endings Guide</h3>
+                            <p class="card-description">
+                                Uncover both endings — including the hidden secret ending.
+                                Spoiler warnings included so you can choose how deep to go.
+                            </p>
+                            <a href="./endings.html" class="card-link-cover" aria-label="Endings Guide"></a>
+                            <span class="card-link" aria-hidden="true">Read More →</span>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- 信任区块 -->
+                <section class="trust-section" aria-labelledby="trustTitle">
+                    <h2 class="section-title" id="trustTitle">Why Trust This Guide?</h2>
+                    <div class="trust-grid">
+                        <div class="trust-item">
+                            <span class="trust-icon" aria-hidden="true">✅</span>
+                            <h3 class="trust-heading">100% Complete</h3>
+                            <p class="trust-text">
+                                Based on multiple full playthroughs across PC and console versions.
+                                Every room explored, every interaction documented.
+                            </p>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon" aria-hidden="true">🔄</span>
+                            <h3 class="trust-heading">Always Updated</h3>
+                            <p class="trust-text">
+                                Including coverage for the upcoming mobile version (June 2026).
+                                We update this guide whenever new information surfaces.
+                            </p>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon" aria-hidden="true">🤝</span>
+                            <h3 class="trust-heading">Community Verified</h3>
+                            <p class="trust-text">
+                                Cross-checked against speedrunning community notes, fan wikis,
+                                and player feedback to ensure accuracy.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 侧边栏广告位 (仅桌面端可见) -->
+            <!-- Monetag/AdSense sidebar -->
+            <aside id="ad-sidebar" class="ad-slot ad-sidebar" role="complementary" aria-label="Advertisement"></aside>
+        </div>
+    </main>
+
+    <!-- ============================================================
+    页脚 (.site-footer)
+    ============================================================ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div>
+                <p class="footer-copyright">
+                    &copy; 2026 <strong>Among the Sleep Guide</strong>. All rights reserved.
+                </p>
+            </div>
+            <nav aria-label="Footer navigation">
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./walkthrough-chapter-1-nursery.html">Walkthrough</a></li>
+                    <li><a href="./puzzle-solutions.html">Puzzles</a></li>
+                    <li><a href="./collectibles.html">Collectibles</a></li>
+                    <li><a href="./endings.html">Endings</a></li>
+                    <li><a href="./mobile-version.html">Mobile FAQ</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+            <p class="footer-disclaimer">
+                Not affiliated with Krillbite Studio. <em>Among the Sleep</em> is a registered
+                trademark of Krillbite Studio. This is a fan-made strategy guide.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    移动端底部导航 (仅手机端显示)
+    ============================================================ -->
+    <nav class="bottom-nav-mobile" aria-label="Quick navigation" id="bottomNavMobile">
+        <a href="./index.html" class="active" aria-current="page">
+            <span class="bn-icon" aria-hidden="true">🏠</span>
+            <span>Home</span>
+        </a>
+        <a href="./walkthrough-chapter-1-nursery.html">
+            <span class="bn-icon" aria-hidden="true">📖</span>
+            <span>Chapters</span>
+        </a>
+        <a href="./puzzle-solutions.html">
+            <span class="bn-icon" aria-hidden="true">🧩</span>
+            <span>Puzzles</span>
+        </a>
+        <a href="./collectibles.html">
+            <span class="bn-icon" aria-hidden="true">⭐</span>
+            <span>Items</span>
+        </a>
+    </nav>
+
+    <!-- ============================================================
+    回到顶部按钮
+    ============================================================ -->
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top"
+        title="Back to top"
+    >
+        ↑
+    </button>
+
+    <!-- ============================================================
+    Cookie 同意弹窗 (GDPR)
+    ============================================================ -->
+    <div class="cookie-consent" id="cookieConsent" role="dialog" aria-labelledby="cookieText" aria-modal="false">
+        <div class="cookie-inner">
+            <p class="cookie-text" id="cookieText">
+                🍪 This site uses cookies for ads and analytics. By continuing, you agree to our use of cookies.
+                <a href="#">Learn more</a>
+            </p>
+            <div class="cookie-actions">
+                <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Accept All</button>
+                <button class="cookie-btn cookie-btn-decline" id="cookieDecline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    JAVASCRIPT — 全站交互逻辑
+    零外部依赖，纯原生JS
+    ============================================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ========================================================
+            // 1. 汉堡菜单交互
+            // ========================================================
+            var hamburgerBtn = document.getElementById('hamburgerBtn');
+            var mobileNavPanel = document.getElementById('mobileNavPanel');
+            var navOverlay = document.getElementById('navOverlay');
+            var isMenuOpen = false;
+
+            /**
+             * 打开移动端菜单
+             */
+            function openMenu() {
+                isMenuOpen = true;
+                mobileNavPanel.classList.add('is-open');
+                navOverlay.classList.add('is-visible');
+                hamburgerBtn.setAttribute('aria-expanded', 'true');
+                hamburgerBtn.setAttribute('aria-label', 'Close menu');
+                // 防止页面滚动
+                document.body.style.overflow = 'hidden';
+                // 焦点移到菜单面板
+                mobileNavPanel.querySelector('a').focus();
+            }
+
+            /**
+             * 关闭移动端菜单
+             */
+            function closeMenu() {
+                isMenuOpen = false;
+                mobileNavPanel.classList.remove('is-open');
+                navOverlay.classList.remove('is-visible');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                hamburgerBtn.setAttribute('aria-label', 'Open menu');
+                // 恢复页面滚动
+                document.body.style.overflow = '';
+                // 焦点回到汉堡按钮
+                hamburgerBtn.focus();
+            }
+
+            /**
+             * 切换菜单状态
+             */
+            function toggleMenu() {
+                if (isMenuOpen) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            }
+
+            // 绑定事件
+            hamburgerBtn.addEventListener('click', toggleMenu);
+            navOverlay.addEventListener('click', closeMenu);
+
+            // ESC 键关闭菜单
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && isMenuOpen) {
+                    closeMenu();
+                }
+            });
+
+            // ========================================================
+            // 2. 顶部导航栏滚动阴影
+            // ========================================================
+            var siteHeader = document.getElementById('siteHeader');
+            var scrollTimeout;
+
+            function updateHeaderShadow() {
+                if (window.scrollY > 10) {
+                    siteHeader.classList.add('scrolled');
+                } else {
+                    siteHeader.classList.remove('scrolled');
+                }
+            }
+
+            // 使用 passive 优化滚动性能
+            window.addEventListener('scroll', function() {
+                if (scrollTimeout) {
+                    window.cancelAnimationFrame(scrollTimeout);
+                }
+                scrollTimeout = window.requestAnimationFrame(updateHeaderShadow);
+            }, { passive: true });
+
+            // ========================================================
+            // 3. 回到顶部按钮
+            // ========================================================
+            var backToTopBtn = document.getElementById('backToTop');
+            var scrollThreshold = 300;
+
+            function updateBackToTop() {
+                if (window.scrollY > scrollThreshold) {
+                    backToTopBtn.classList.add('is-visible');
+                } else {
+                    backToTopBtn.classList.remove('is-visible');
+                }
+            }
+
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 复用上面的滚动监听逻辑
+            var backToTopTimeout;
+            window.addEventListener('scroll', function() {
+                if (backToTopTimeout) {
+                    window.cancelAnimationFrame(backToTopTimeout);
+                }
+                backToTopTimeout = window.requestAnimationFrame(function() {
+                    updateHeaderShadow();
+                    updateBackToTop();
+                });
+            }, { passive: true });
+
+            // ====================================================
+            // 4. Cookie 同意弹窗 (GDPR)
+            //    暴露 window.cookieConsentAccepted 供广告系统读取
+            //    使用 localStorage，24小时内不再显示
+            // ====================================================
+            var cookieConsent = document.getElementById('cookieConsent');
+            var cookieAccept = document.getElementById('cookieAccept');
+            var cookieDecline = document.getElementById('cookieDecline');
+            var COOKIE_STORAGE_KEY = 'cookie-consent';
+            var COOKIE_EXPIRY_HOURS = 24;
+
+            /**
+             * 全局变量：供广告系统读取
+             * true = 用户已同意，可以加载广告
+             * false = 用户拒绝或未选择
+             */
+            window.cookieConsentAccepted = false;
+
+            /**
+             * 检查是否应该显示Cookie弹窗
+             * @returns {boolean}
+             */
+            function shouldShowCookieConsent() {
+                try {
+                    var stored = localStorage.getItem(COOKIE_STORAGE_KEY);
+                    if (!stored) {
+                        return true;
+                    }
+                    var data = JSON.parse(stored);
+                    var now = Date.now();
+                    var expiryMs = COOKIE_EXPIRY_HOURS * 60 * 60 * 1000;
+                    // 超过24小时，重新询问
+                    if (now - data.timestamp > expiryMs) {
+                        localStorage.removeItem(COOKIE_STORAGE_KEY);
+                        window.cookieConsentAccepted = false;
+                        return true;
+                    }
+                    // 恢复全局状态
+                    if (data.choice === 'accepted') {
+                        window.cookieConsentAccepted = true;
+                    }
+                    return false;
+                } catch (e) {
+                    // localStorage 不可用时，显示弹窗
+                    return true;
+                }
+            }
+
+            /**
+             * 保存用户选择
+             * @param {string} choice - 'accepted' 或 'declined'
+             */
+            function saveCookieConsent(choice) {
+                try {
+                    var data = {
+                        choice: choice,
+                        timestamp: Date.now()
+                    };
+                    localStorage.setItem(COOKIE_STORAGE_KEY, JSON.stringify(data));
+                    // 更新全局变量
+                    window.cookieConsentAccepted = (choice === 'accepted');
+                } catch (e) {
+                    // localStorage 不可用时静默失败
+                }
+            }
+
+            /**
+             * 隐藏Cookie弹窗
+             */
+            function hideCookieConsent() {
+                cookieConsent.classList.remove('is-visible');
+            }
+
+            // 事件绑定
+            cookieAccept.addEventListener('click', function() {
+                saveCookieConsent('accepted');
+                hideCookieConsent();
+                // 用户同意后，尝试初始化广告
+                if (typeof initAds === 'function') {
+                    initAds();
+                }
+            });
+
+            cookieDecline.addEventListener('click', function() {
+                saveCookieConsent('declined');
+                hideCookieConsent();
+            });
+
+            // 初始化
+            if (shouldShowCookieConsent()) {
+                // 延迟显示，避免页面加载时立刻弹出
+                setTimeout(function() {
+                    cookieConsent.classList.add('is-visible');
+                }, 800);
+            } else {
+                // 用户之前已同意，直接尝试初始化广告
+                if (window.cookieConsentAccepted && typeof initAds === 'function') {
+                    initAds();
+                }
+            }
+
+            // ========================================================
+            // 5. 桌面端下拉菜单无障碍增强
+            //    确保键盘用户可以操作下拉菜单
+            // ========================================================
+            var dropdownToggles = document.querySelectorAll('.has-dropdown > .dropdown-toggle');
+
+            dropdownToggles.forEach(function(toggle) {
+                // 键盘 Enter/Space 展开下拉（通过focus模拟）
+                toggle.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        // 桌面端hover已处理，这里确保键盘也能触发下拉内链接
+                        var dropdown = this.nextElementSibling;
+                        if (dropdown && dropdown.classList.contains('dropdown-menu')) {
+                            var firstLink = dropdown.querySelector('a');
+                            if (firstLink) {
+                                event.preventDefault();
+                                firstLink.focus();
+                            }
+                        }
+                    }
+                });
+            });
+
+            // 下拉菜单内键盘导航：ESC关闭
+            var dropdownMenus = document.querySelectorAll('.dropdown-menu');
+            dropdownMenus.forEach(function(menu) {
+                menu.addEventListener('keydown', function(event) {
+                    if (event.key === 'Escape') {
+                        // 焦点回到父级toggle
+                        var toggle = this.parentElement.querySelector('.dropdown-toggle');
+                        if (toggle) {
+                            toggle.focus();
+                        }
+                    }
+                });
+            });
+
+            // ========================================================
+            // 广告控制系统（初期不加载，积累内容权重后启用）
+            // ========================================================
+
+            window.adConfig = {
+                enabled: false,
+                network: 'monetag',
+                debug: false
+            };
+
+            function initAds() {
+                if (!window.adConfig.enabled) return;
+                if (!window.cookieConsentAccepted) return;
+
+                var adSlots = document.querySelectorAll('.ad-slot');
+                adSlots.forEach(function(slot) {
+                    slot.classList.add('ad-loaded');
+                });
+
+                // 初期 Monetag（启用后取消注释）
+                // 后期 AdSense（月PV≥5万时取消注释）
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initAds);
+            } else {
+                initAds();
+            }
+
+            // ========================================================
+            // 初始状态检查
+            // ========================================================
+            updateHeaderShadow();
+            updateBackToTop();
+
+            console.log(
+                '%c🧸 Among the Sleep Guide %c— Framework initialized',
+                'color: #D4943A; font-weight: bold;',
+                'color: #B5A99E;'
+            );
+            console.log(
+                '%cDesign System v1.0 | Phase 1 | Built with vanilla HTML/CSS/JS',
+                'color: #7A6E65; font-size: 0.85em;'
+            );
+        })();
+    </script>
+</body>
+</html>
