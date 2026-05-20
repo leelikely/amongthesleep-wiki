@@ -787,7 +787,7 @@
             };
 
             function initAds() {
-                if (!window.adConfig.enabled) return;
+                if (!window.adConfig || !window.adConfig.enabled) return;
                 if (!window.cookieConsentAccepted) return;
 
                 // 全局 Vignette Banner

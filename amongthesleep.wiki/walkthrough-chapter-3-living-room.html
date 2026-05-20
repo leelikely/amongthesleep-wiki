@@ -1239,7 +1239,7 @@
                     <li><a href="./mobile-version.html">Mobile FAQ</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./privacy-policy.html">Privacy Policy</a>
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
                 </ul>
             </nav>
             <p class="footer-disclaimer">Not affiliated with Krillbite Studio. <em>Among the Sleep</em> is a registered trademark of Krillbite Studio. This is a fan-made strategy guide.</p>
@@ -1469,7 +1469,7 @@ window.adConfig = {
     debug: false
 };
 function initAds() {
-    if (!window.adConfig.enabled) return;
+    if (!window.adConfig || !window.adConfig.enabled) return;
     if (!window.cookieConsentAccepted) return;
     // 1. 顶部横幅 In-Page Push
     (function(containerId, zone) {
