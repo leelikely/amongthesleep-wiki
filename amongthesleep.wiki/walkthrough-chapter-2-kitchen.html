@@ -2072,7 +2072,7 @@
                     <li><a href="./mobile-version.html">Mobile FAQ</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="./privacy-policy.html">Privacy Policy</a>
                 </ul>
             </nav>
             <p class="footer-disclaimer">
@@ -2379,34 +2379,71 @@
                 });
             });
             
-            // ========================================================
-            // 广告控制系统（初期不加载，积累内容权重后启用）
-            // ========================================================
-
-            window.adConfig = {
-                enabled: false,
-                network: 'monetag',
-                debug: false
-            };
-
-            function initAds() {
-                if (!window.adConfig.enabled) return;
-                if (!window.cookieConsentAccepted) return;
-
-                var adSlots = document.querySelectorAll('.ad-slot');
-                adSlots.forEach(function(slot) {
-                    slot.classList.add('ad-loaded');
-                });
-
-                // 初期 Monetag（启用后取消注释）
-                // 后期 AdSense（月PV≥5万时取消注释）
-            }
-
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initAds);
-            } else {
-                initAds();
-            }
+// ========================================================
+// Monetag 广告系统（已启用）
+// ========================================================
+window.adConfig = {
+    enabled: true,                // ← 已经改成 true，不用再动！
+    network: 'monetag',
+    debug: false
+};
+function initAds() {
+    if (!window.adConfig.enabled) return;
+    if (!window.cookieConsentAccepted) return;
+    // 1. 顶部横幅 In-Page Push
+    (function(containerId, zone) {
+        var container = document.getElementById(containerId);
+        if (container) {
+            var script = document.createElement('script');
+            script.dataset.zone = zone;
+            script.src = 'https://nap5k.com/tag.min.js';
+            container.appendChild(script);
+            container.classList.add('ad-loaded');
+        }
+    })('ad-banner-top', '11031331');
+    // 2. 侧边栏 In-Page Push
+    (function(containerId, zone) {
+        var container = document.getElementById(containerId);
+        if (container) {
+            var script = document.createElement('script');
+            script.dataset.zone = zone;
+            script.src = 'https://nap5k.com/tag.min.js';
+            container.appendChild(script);
+            container.classList.add('ad-loaded');
+        }
+    })('ad-sidebar', '11031329');
+    // 3. 正文内嵌 In-Page Push
+    (function(containerId, zone) {
+        var container = document.getElementById(containerId);
+        if (container) {
+            var script = document.createElement('script');
+            script.dataset.zone = zone;
+            script.src = 'https://nap5k.com/tag.min.js';
+            container.appendChild(script);
+            container.classList.add('ad-loaded');
+        }
+    })('ad-in-content', '11031327');
+    // 4. 全局 Vignette Banner（无需占位）
+    (function() {
+        var script = document.createElement('script');
+        script.dataset.zone = '11031371';
+        script.src = 'https://n6wxm.com/vignette.min.js';
+        document.body.appendChild(script);
+    })();
+    // 5. 全局 Push Notifications（无需占位）
+    (function() {
+        var script = document.createElement('script');
+        script.src = 'https://5gvci.com/act/files/tag.min.js?z=11031370';
+        script.setAttribute('data-cfasync', 'false');
+        script.async = true;
+        document.body.appendChild(script);
+    })();
+}
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAds);
+} else {
+    initAds();
+}
 
             // ========================================================
             // 初始状态检查

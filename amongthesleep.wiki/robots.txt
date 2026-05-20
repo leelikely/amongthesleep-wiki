@@ -1,6 +1,29 @@
+# ============================================================
+# amongthesleep.wiki — Robots Exclusion Protocol
+# 面向 Google / Bing / 通用爬虫
+# ============================================================
+
 User-agent: *
 Allow: /
 
+# 禁止索引广告 Service Worker（仅用于 Monetag 推送）
+Disallow: /sw.js
+
+# 禁止索引管理类目录（如果有）
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# ============================================================
+# Sitemap 声明（最重要！）
+# ============================================================
 Sitemap: https://amongthesleep.wiki/sitemap.xml
 
+# ============================================================
+# 爬虫速率控制（可选，按服务器承受力调整）
+# ============================================================
+User-agent: Googlebot
+Crawl-delay: 2
+
+User-agent: Bingbot
 Crawl-delay: 5

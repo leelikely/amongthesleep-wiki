@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+    <!-- ============================================================
+    首页 — 最高优先级
+    ============================================================ -->
     <url>
-        <loc>https://amongthesleep.wiki/index.html</loc>
-        <lastmod>2026-06-01</lastmod>
+        <loc>https://amongthesleep.wiki/</loc>
+        <lastmod>2026-07-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
+    <!-- ============================================================
+    攻略章节（Ch1–Ch5）— 内容核心，长尾关键词来源
+    ============================================================ -->
     <url>
         <loc>https://amongthesleep.wiki/walkthrough-chapter-1-nursery.html</loc>
         <lastmod>2026-06-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.90</priority>
+        <image:image>
+            <image:loc>https://amongthesleep.wiki/assets/images/nursery-1.jpeg</image:loc>
+            <image:title>Among the Sleep Chapter 1 Nursery Walkthrough</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://amongthesleep.wiki/walkthrough-chapter-2-kitchen.html</loc>
@@ -39,31 +51,37 @@
         <priority>0.90</priority>
     </url>
 
+    <!-- ============================================================
+    辅助内容页
+    ============================================================ -->
     <url>
         <loc>https://amongthesleep.wiki/puzzle-solutions.html</loc>
         <lastmod>2026-06-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.80</priority>
+        <priority>0.85</priority>
     </url>
     <url>
         <loc>https://amongthesleep.wiki/collectibles.html</loc>
         <lastmod>2026-06-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.80</priority>
+        <priority>0.85</priority>
     </url>
     <url>
         <loc>https://amongthesleep.wiki/endings.html</loc>
         <lastmod>2026-06-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.80</priority>
+        <priority>0.85</priority>
     </url>
-
     <url>
         <loc>https://amongthesleep.wiki/mobile-version.html</loc>
         <lastmod>2026-06-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
+
+    <!-- ============================================================
+    边缘页面
+    ============================================================ -->
     <url>
         <loc>https://amongthesleep.wiki/about.html</loc>
         <lastmod>2026-06-01</lastmod>
@@ -76,4 +94,11 @@
         <changefreq>monthly</changefreq>
         <priority>0.60</priority>
     </url>
+    <url>
+        <loc>https://amongthesleep.wiki/privacy-policy.html</loc>
+        <lastmod>2026-07-14</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.50</priority>
+    </url>
+
 </urlset>
