@@ -1062,48 +1062,12 @@
             });
 
             // ========================================================
-            // Monetag 广告系统（已启用）
-            // ========================================================
-            window.adConfig = {
-                enabled: true,
-                network: 'monetag',
-                debug: false
-            };
-
-            function initAds() {
-                if (!window.adConfig || !window.adConfig.enabled) return;
-                if (!window.cookieConsentAccepted) return;
-
-                // 全局 Vignette Banner
-                (function(){
-                    var s = document.createElement('script');
-                    s.dataset.zone = '11031371';
-                    s.src = 'https://n6wxm.com/vignette.min.js';
-                    document.body.appendChild(s);
-                })();
-
-                // 全局 Push Notifications
-                (function(){
-                    var s = document.createElement('script');
-                    s.src = 'https://5gvci.com/act/files/tag.min.js?z=11031370';
-                    s.setAttribute('data-cfasync', 'false');
-                    s.async = true;
-                    document.body.appendChild(s);
-                })();
-            }
-
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', function() {
-                    // 如果 cookie 已同意，则加载广告（已通过 shouldShowCookieConsent 设置）
-                    if (window.cookieConsentAccepted) initAds();
-                });
-            } else {
-                if (window.cookieConsentAccepted) initAds();
-            }
+            
 
             updateHeaderShadow();
             updateBackToTop();
         })();
     </script>
+<script src="https://quge5.com/88/tag.min.js" data-zone="241945" async data-cfasync="false"></script>
 </body>
 </html>
